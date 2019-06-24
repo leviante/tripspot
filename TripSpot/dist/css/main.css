@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/*-----------------------------------
+
+    Project name:  Tripspot redesign
+    Project start date: 24.06.2019
+    Project end date: -
+    Author: Berk Açıkgöz
+
+    CONTENTS:
+    
+
+
+-----------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+#main-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  font-family: "Montserrat", sans-serif;
+  width: 100%; }
+  #main-nav .nav-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%; }
+  #main-nav .nav-ph {
+    align-self: flex-end;
+    letter-spacing: 1.5px;
+    margin: 20px 0 25px 0; }
+  #main-nav .navbar {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    #main-nav .navbar .navbar-brand {
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      font-size: 30px; }
+      #main-nav .navbar .navbar-brand i {
+        font-size: 38px;
+        color: #f4b200;
+        margin-right: 5px; }
+    #main-nav .navbar .navbar-links {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin-left: auto; }
+      #main-nav .navbar .navbar-links .navbar-link {
+        margin-right: 25px; }
+        #main-nav .navbar .navbar-links .navbar-link .link-item {
+          text-decoration: none;
+          letter-spacing: 0.5px; }

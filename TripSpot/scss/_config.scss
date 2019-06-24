@@ -1,0 +1,42 @@
+// This file contains variables, mixins and functions needed for main.scss file.
+
+$primary-color: #f4b200;
+$secondary-color: #011144;
+
+$primary-font: "Montserrat", sans-serif;
+$secondary-font: "Lato", sans-serif;
+
+//Mixins for flex display
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@mixin flex-align-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-col-align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-col-justify-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
