@@ -1,19 +1,25 @@
 /*-----------------------------------
+  -----------------------------------
+  -----------------------------------
 
-    Project name:  Tripspot redesign
-    Project start date: 24.06.2019
-    Project end date: -
+    Project Name:  Tripspot redesign 
+    Project Start Date: 24.06.2019
+    Project End Date: -
     Author: Berk Açıkgöz
 
-    CONTENTS:
-
+    TABLE OF CONTENTS:
+    
+    - Global Reset
+    - Navbar
     - Section 1 (Landing)
     - Section 2 (Info)
     - Section 3 (Services)
     - Section 4 (Experience)
+    - Section 5 (Guides)
+
     
-
-
+-----------------------------------
+-----------------------------------
 -----------------------------------*/
 
 @import "config";
@@ -293,6 +299,7 @@
 
 #services {
   @include flex-col-align-center;
+  background-color: #eee;
 
   h1 {
     font-family: $primary-font;
@@ -386,6 +393,7 @@
 
 #experience {
   @include flex-justify-center;
+  align-items: center;
   position: relative;
   background: url(../img/experience.jpg);
   background-size: cover;
@@ -405,8 +413,8 @@
     position: relative;
     font-family: $primary-font;
     color: #fff;
-    width: 45%;
-    margin: 80px 25px 100px 100px;
+    width: 40%;
+    margin: 80px 25px 100px 20px;
     z-index: 2;
 
     h1 {
@@ -427,6 +435,7 @@
 
     h3 {
       font-weight: 600;
+      font-size: 25px;
       letter-spacing: 0.8px;
 
       span {
@@ -439,10 +448,10 @@
   //CARDS
 
   .experience-info {
-    @include flex;
+    @include flex-justify-center;
     position: relative;
     color: #fff;
-    width: 45%;
+    width: 40%;
     margin: 80px 25px 100px 0px;
     z-index: 2;
 
@@ -489,6 +498,65 @@
         font-size: 20px;
         z-index: 2;
         margin-top: 20px;
+      }
+    }
+  }
+}
+
+// SECTION 5 - GUIDES
+
+#guides {
+  position: relative;
+  @include flex-col-align-center;
+  background-color: #eee;
+  width: 100%;
+  z-index: 2;
+
+  h1 {
+    font-family: $primary-font;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 80px 0px 35px 0px;
+  }
+
+  .guides-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 220px);
+    grid-gap: 50px;
+    justify-content: center;
+    margin-bottom: 120px;
+    width: 90%;
+
+    .guide-card {
+      img {
+        width: 100%;
+      }
+
+      .card-text {
+        font-family: $primary-font;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 0.8px;
+        padding: 10px;
+        margin-top: -4px;
+        background-color: $secondary-color;
+
+        p {
+          &:nth-child(1) {
+            font-weight: 600;
+            font-size: 20px;
+            margin: 15px 0 5px 0;
+          }
+          &:nth-child(2) {
+            color: #a8acaf;
+            font-weight: 400;
+            font-size: 13px;
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+          }
+        }
       }
     }
   }
