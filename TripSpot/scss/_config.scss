@@ -75,3 +75,10 @@ $tours: (
     height: 200px;
   }
 }
+
+//Mixin for backgrounds
+@mixin background-props {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

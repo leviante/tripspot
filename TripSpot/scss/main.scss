@@ -17,6 +17,7 @@
     - Section 4 (Experience)
     - Section 5 (Guides)
     - Section 6 (Gallery)
+    - Section 7 (Prices)
 
     
 -----------------------------------
@@ -606,6 +607,96 @@
         color: #fff;
         text-transform: uppercase;
         padding: 10px;
+      }
+    }
+  }
+}
+
+// SECTION 7 - PRICES
+#prices {
+  @include flex-col-align-center;
+  background-color: #eee;
+
+  h1 {
+    font-family: $primary-font;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin: 100px 0 50px 0;
+  }
+
+  .price-container {
+    @include flex-justify-center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 120px;
+
+    .price-info {
+      position: relative;
+      font-family: $primary-font;
+      text-align: center;
+      height: 439px;
+      margin: 55px 10px;
+      overflow: hidden;
+
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        margin-bottom: 15px;
+      }
+
+      .price-img {
+        @include flex;
+        justify-content: flex-end;
+        width: 300px;
+        height: 400px;
+
+        p {
+          align-self: flex-start;
+          background-color: $primary-color;
+          color: #fff;
+          font-size: 30px;
+          padding: 5px;
+          margin: 3px 3px 0px 0px;
+          i {
+            font-size: 15px;
+          }
+        }
+      }
+
+      @for $num from 1 through 4 {
+        &:nth-child(#{$num}) {
+          .price-img {
+            background: url(../img/price-#{$num}.jpg);
+            @include background-props;
+          }
+        }
+      }
+
+      .price-book {
+        background: rgba(242, 177, 41, 0.8);
+        color: #333;
+        position: relative;
+        width: 100%;
+        padding: 20px;
+
+        p {
+          text-transform: capitalize;
+          font-weight: 600;
+        }
+
+        a {
+          display: inline-block;
+          text-decoration: none;
+          color: #333;
+          border: 1px solid #333;
+          padding: 13px 20px;
+
+          &:hover {
+            background-color: #eee;
+          }
+        }
       }
     }
   }

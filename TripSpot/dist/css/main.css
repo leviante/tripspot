@@ -18,6 +18,7 @@
     - Section 4 (Experience)
     - Section 5 (Guides)
     - Section 6 (Gallery)
+    - Section 7 (Prices)
 
     
 -----------------------------------
@@ -523,3 +524,86 @@
         color: #fff;
         text-transform: uppercase;
         padding: 10px; }
+
+#prices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eee; }
+  #prices h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin: 100px 0 50px 0; }
+  #prices .price-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 120px; }
+    #prices .price-container .price-info {
+      position: relative;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+      height: 439px;
+      margin: 55px 10px;
+      overflow: hidden; }
+      #prices .price-container .price-info p {
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        margin-bottom: 15px; }
+      #prices .price-container .price-info .price-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 300px;
+        height: 400px; }
+        #prices .price-container .price-info .price-img p {
+          align-self: flex-start;
+          background-color: #f4b200;
+          color: #fff;
+          font-size: 30px;
+          padding: 5px;
+          margin: 3px 3px 0px 0px; }
+          #prices .price-container .price-info .price-img p i {
+            font-size: 15px; }
+      #prices .price-container .price-info:nth-child(1) .price-img {
+        background: url(../img/price-1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      #prices .price-container .price-info:nth-child(2) .price-img {
+        background: url(../img/price-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      #prices .price-container .price-info:nth-child(3) .price-img {
+        background: url(../img/price-3.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      #prices .price-container .price-info:nth-child(4) .price-img {
+        background: url(../img/price-4.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      #prices .price-container .price-info .price-book {
+        background: rgba(242, 177, 41, 0.8);
+        color: #333;
+        position: relative;
+        width: 100%;
+        padding: 20px; }
+        #prices .price-container .price-info .price-book p {
+          text-transform: capitalize;
+          font-weight: 600; }
+        #prices .price-container .price-info .price-book a {
+          display: inline-block;
+          text-decoration: none;
+          color: #333;
+          border: 1px solid #333;
+          padding: 13px 20px; }
+          #prices .price-container .price-info .price-book a:hover {
+            background-color: #eee; }
