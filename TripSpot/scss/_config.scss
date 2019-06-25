@@ -6,6 +6,13 @@ $secondary-color: #011144;
 $primary-font: "Montserrat", sans-serif;
 $secondary-font: "Lato", sans-serif;
 
+$tours: (
+  "1": canada,
+  "2": asia,
+  "3": europe,
+  "4": us
+);
+
 //Mixins for flex display
 @mixin flex {
   display: flex;
@@ -39,4 +46,32 @@ $secondary-font: "Lato", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+//Mixin for black overlay
+
+@mixin dark-overlay($num) {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  @if ($num == "1") {
+    width: 510px;
+    height: 620px;
+  }
+  @if ($num == "2") {
+    width: 500px;
+    height: 400px;
+  }
+  @if ($num == "3") {
+    width: 250px;
+    height: 200px;
+  }
+  @if ($num == "4") {
+    width: 250px;
+    height: 200px;
+  }
 }

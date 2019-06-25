@@ -338,4 +338,49 @@
       }
     }
   }
+
+  .tours {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas:
+      "canada canada asia asia"
+      "canada canada asia asia"
+      "canada canada europe us";
+    justify-content: center;
+    grid-gap: 10px;
+    margin: 50px 0px 120px 0px;
+    width: 90%;
+
+    .tour {
+      @include flex-justify-center;
+      position: relative;
+      font-family: $primary-font;
+
+      @each $num, $tour in $tours {
+        &:nth-child(#{$num}) {
+          grid-area: $tour;
+          background: url(../img/tour-#{$num}.jpg);
+          background-size: cover;
+          color: #fff;
+
+          &:after {
+            @include dark-overlay(#{$num});
+          }
+        }
+      }
+
+      h4 {
+        text-align: center;
+        align-self: flex-end;
+        position: relative;
+        letter-spacing: 4px;
+        font-size: 25px;
+        font-weight: 400;
+        color: #fff;
+        margin-bottom: 30px;
+        z-index: 2;
+      }
+    }
+  }
 }
