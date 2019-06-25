@@ -6,6 +6,9 @@
     Author: Berk Açıkgöz
 
     CONTENTS:
+
+    - Section 1 (Landing)
+    - Section 2 (Info 1)
     
 
 
@@ -27,7 +30,7 @@
   position: fixed;
   font-family: $primary-font;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 
   .nav-container {
     @include flex-col;
@@ -75,7 +78,7 @@
   }
 }
 
-// LANDING
+// SECTION 1 - LANDING
 
 #landing {
   @include flex-justify-center;
@@ -223,6 +226,67 @@
         cursor: pointer;
         transition: all 0.3s ease-out;
       }
+    }
+  }
+}
+
+// SECTION 2 - INFO 1
+#info-1 {
+  @include flex-align-center;
+  position: relative;
+  z-index: 2;
+  background-color: $primary-color;
+
+  .info-text {
+    align-self: flex-start;
+    font-family: $primary-font;
+    color: #fff;
+    margin: 80px 0px 0px 70px;
+    width: 90%;
+
+    h3 {
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 1.5;
+      letter-spacing: 0.8px;
+      margin-bottom: 30px;
+      width: 80%;
+    }
+
+    p {
+      font-family: $secondary-font;
+      font-size: 18px;
+      line-height: 2;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: inline-block;
+      background-color: $secondary-color;
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 13px 32px;
+      border: none;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+      }
+    }
+  }
+
+  .info-img {
+    width: 100%;
+    height: 50%;
+    margin: 100px 70px 150px 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
