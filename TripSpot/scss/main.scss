@@ -16,6 +16,7 @@
     - Section 3 (Services)
     - Section 4 (Experience)
     - Section 5 (Guides)
+    - Section 6 (Gallery)
 
     
 -----------------------------------
@@ -557,6 +558,54 @@
             margin-bottom: 15px;
           }
         }
+      }
+    }
+  }
+}
+
+//SECTION 6 - GALLERY
+#gallery {
+  @include flex-col-align-center;
+
+  h1 {
+    font-family: $primary-font;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin: 100px 0 50px 0;
+  }
+
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    grid-gap: 10px;
+    width: 100%;
+    margin-bottom: 120px;
+
+    .gallery-card {
+      @include flex-col;
+      width: 100%;
+      text-align: center;
+      overflow: hidden;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      img {
+        height: 92%;
+        width: 100%;
+      }
+
+      p {
+        margin-top: 0;
+        background-color: $primary-color;
+        font-family: $primary-font;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 10px;
       }
     }
   }

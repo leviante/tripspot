@@ -17,6 +17,7 @@
     - Section 3 (Services)
     - Section 4 (Experience)
     - Section 5 (Guides)
+    - Section 6 (Gallery)
 
     
 -----------------------------------
@@ -485,3 +486,40 @@
         font-size: 13px;
         text-transform: uppercase;
         margin-bottom: 15px; }
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #gallery h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin: 100px 0 50px 0; }
+  #gallery .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    grid-gap: 10px;
+    width: 100%;
+    margin-bottom: 120px; }
+    #gallery .gallery-container .gallery-card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      overflow: hidden; }
+      #gallery .gallery-container .gallery-card:hover {
+        cursor: pointer; }
+      #gallery .gallery-container .gallery-card img {
+        height: 92%;
+        width: 100%; }
+      #gallery .gallery-container .gallery-card p {
+        margin-top: 0;
+        background-color: #f4b200;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 10px; }
