@@ -380,5 +380,87 @@
         <div class="form-img"></div>
       </div>
     </section>
+
+    <!-- SECTION 10 - GOOGLE MAPS -->
+    <section id="map"></section>
+
+    <!-- SECTION 11 - MAIN FOOTER -->
+    <footer id="main-footer">
+      <a href="#" class="footer-home">
+        <i class="fab fa-free-code-camp"></i> Trip Spot
+      </a>
+      <div class="footer-container">
+        <div class="footer-card">
+          <h2>Links</h2>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Our Mission</a>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Latest Tours</a>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Explore</a>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Find us</a>
+          <a href="#"
+            ><i class="fas fa-angle-double-right"></i> Privacy Policy</a
+          >
+        </div>
+        <div class="footer-card">
+          <h2>Navigation</h2>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Home</a>
+          <a href="#"><i class="fas fa-angle-double-right"></i> About Us</a>
+          <a href="#"
+            ><i class="fas fa-angle-double-right"></i> More Services</a
+          >
+          <a href="#"><i class="fas fa-angle-double-right"></i> Team</a>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Contact Us</a>
+        </div>
+        <div class="footer-card">
+          <h2>Customer Care</h2>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Our Mission</a>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Latest Tours</a>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Explore</a>
+          <a href="#"><i class="fas fa-angle-double-right"></i> Find us</a>
+          <a href="#"
+            ><i class="fas fa-angle-double-right"></i> Privacy Policy</a
+          >
+        </div>
+        <div class="footer-card">
+          <h2>Contact Us</h2>
+          <a href="#">info@example.com</a>
+          <p><i class="fas fa-plus"></i> 456 123 7890</p>
+          <p>
+            <i class="fas fa-plus"></i> 90 nsequursu dsdesdc, Honey Street
+            049436.
+          </p>
+        </div>
+      </div>
+      <div class="footer-text">
+        <p>
+          &copy; 2019 Trip Spot. All Rights Reserved | Design by
+          <a href="w3layouts.com">W3layouts</a> | Redesign by
+          <span>Berk Açıkgöz.</span>
+        </p>
+        <div class="scroll-up">
+          <a href=""><i class="fas fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPT FOR GOOGLE MAPS - DON'T CHANGE HERE -->
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        var uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 4,
+          center: uluru
+        });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({ position: uluru, map: map });
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBo9TwRK26AG1axE-gKy0zA4julX6bU_o&callback=initMap"
+    ></script>
   </body>
 </html>
