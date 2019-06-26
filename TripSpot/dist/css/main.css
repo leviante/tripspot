@@ -19,6 +19,7 @@
     - Section 5 (Guides)
     - Section 6 (Gallery)
     - Section 7 (Prices)
+    - Section 8 (Client Reviews)
 
     
 -----------------------------------
@@ -607,3 +608,91 @@
           padding: 13px 20px; }
           #prices .price-container .price-info .price-book a:hover {
             background-color: #eee; }
+
+#reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4b200; }
+  #reviews h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 100px 0px 50px 0px; }
+  #reviews .review-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap; }
+    #reviews .review-container .review-card {
+      display: flex;
+      flex-direction: column;
+      font-family: "Montserrat", sans-serif;
+      width: 350px;
+      margin-bottom: 40px; }
+      #reviews .review-container .review-card p:nth-child(1) {
+        background-color: #011144;
+        border-radius: 5px;
+        font-family: "Lato", sans-serif;
+        color: #707579;
+        letter-spacing: 1px;
+        line-height: 2;
+        padding: 35px 35px; }
+        #reviews .review-container .review-card p:nth-child(1) i {
+          font-size: 20px;
+          color: #eee; }
+      #reviews .review-container .review-card:nth-child(2) {
+        margin: 0px 20px 40px 20px; }
+      #reviews .review-container .review-card:nth-child(1) .card-img {
+        align-self: flex-end;
+        background: url(../img/review-1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px solid #ffcc42;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin: 5px 5px 0px 0px;
+        background-position: top; }
+      #reviews .review-container .review-card:nth-child(2) .card-img {
+        align-self: flex-end;
+        background: url(../img/review-2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px solid #ffcc42;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin: 5px 5px 0px 0px; }
+      #reviews .review-container .review-card:nth-child(3) .card-img {
+        align-self: flex-end;
+        background: url(../img/review-3.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px solid #ffcc42;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin: 5px 5px 0px 0px; }
+      #reviews .review-container .review-card:nth-child(4) .card-img {
+        align-self: flex-end;
+        background: url(../img/review-4.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px solid #ffcc42;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin: 5px 5px 0px 0px; }
+      #reviews .review-container .review-card p:nth-child(3) {
+        align-self: flex-end;
+        color: #fff;
+        font-weight: 600;
+        margin: 15px 5px; }

@@ -18,6 +18,7 @@
     - Section 5 (Guides)
     - Section 6 (Gallery)
     - Section 7 (Prices)
+    - Section 8 (Client Reviews)
 
     
 -----------------------------------
@@ -697,6 +698,79 @@
             background-color: #eee;
           }
         }
+      }
+    }
+  }
+}
+
+// SECTION 8 - CLIENT REVIEWS
+#reviews {
+  @include flex-col-align-center;
+  background-color: $primary-color;
+
+  h1 {
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 100px 0px 50px 0px;
+  }
+
+  .review-container {
+    @include flex-justify-center;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .review-card {
+      @include flex-col;
+      font-family: $primary-font;
+      width: 350px;
+      margin-bottom: 40px;
+
+      p:nth-child(1) {
+        background-color: $secondary-color;
+        border-radius: 5px;
+        font-family: $secondary-font;
+        color: #707579;
+        letter-spacing: 1px;
+        line-height: 2;
+        padding: 35px 35px;
+
+        i {
+          font-size: 20px;
+          color: #eee;
+        }
+      }
+
+      &:nth-child(2) {
+        margin: 0px 20px 40px 20px;
+      }
+
+      @for $num from 1 through 4 {
+        &:nth-child(#{$num}) {
+          .card-img {
+            align-self: flex-end;
+            background: url(../img/review-#{$num}.jpg);
+            @include background-props;
+            border: 3px solid lighten($primary-color, 15);
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            margin: 5px 5px 0px 0px;
+
+            @if ($num == 1) {
+              background-position: top;
+            }
+          }
+        }
+      }
+
+      p:nth-child(3) {
+        align-self: flex-end;
+        color: #fff;
+        font-weight: 600;
+        margin: 15px 5px;
       }
     }
   }
