@@ -827,4 +827,66 @@
       }
     }
   }
+  .form-container {
+    @include flex-justify-center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 100px;
+
+    #contact-form {
+      @include flex-col-align-center;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 2px 6px 18px 5px rgba(227, 227, 227, 1);
+      padding: 40px;
+      margin-right: 20px;
+      margin-bottom: 50px;
+
+      input {
+        background-color: darken(white, 3.4);
+        border: none;
+        border-radius: 3px;
+        font-family: $primary-font;
+        font-size: 13px;
+        letter-spacing: 1px;
+        width: 450px;
+        height: 50px;
+        padding-left: 15px;
+        margin-bottom: 20px;
+      }
+
+      textarea {
+        background-color: darken(white, 3.4);
+        border: none;
+        border-radius: 3px;
+        font-family: $primary-font;
+        font-size: 13px;
+        letter-spacing: 1px;
+        width: 450px;
+        height: 80px;
+        padding: 15px 0px 0px 15px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        -webkit-appearance: none;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 3px;
+        color: #fff;
+        font-family: $primary-font;
+        font-size: 15px;
+        letter-spacing: 0.7px;
+        padding: 10px 0px;
+        width: 450px;
+      }
+    }
+
+    .form-img {
+      background: url(../img/form.jpg);
+      @include background-props;
+      width: 500px;
+      height: 500px;
+    }
+  }
 }
