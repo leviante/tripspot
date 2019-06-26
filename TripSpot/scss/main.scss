@@ -19,6 +19,7 @@
     - Section 6 (Gallery)
     - Section 7 (Prices)
     - Section 8 (Client Reviews)
+    - Section 9 (Contact Us)
 
     
 -----------------------------------
@@ -771,6 +772,58 @@
         color: #fff;
         font-weight: 600;
         margin: 15px 5px;
+      }
+    }
+  }
+}
+
+// SECTION 9 - CONTACT US
+#contact {
+  @include flex-col-align-center;
+
+  h1 {
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 100px 0px 50px 0px;
+  }
+
+  .contact-container {
+    @include flex-justify-center;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .contact-card {
+      @include flex-col-align-center;
+      font-family: $secondary-font;
+      width: 350px;
+      margin-bottom: 40px;
+
+      i {
+        font-size: 30px;
+        color: $primary-color;
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        color: #707579;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 2;
+        text-align: center;
+        width: 60%;
+      }
+
+      &:nth-child(2) {
+        margin: 0px 10px 40px 10px;
       }
     }
   }

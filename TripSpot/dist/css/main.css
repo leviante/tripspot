@@ -20,6 +20,7 @@
     - Section 6 (Gallery)
     - Section 7 (Prices)
     - Section 8 (Client Reviews)
+    - Section 9 (Contact Us)
 
     
 -----------------------------------
@@ -696,3 +697,45 @@
         color: #fff;
         font-weight: 600;
         margin: 15px 5px; }
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #contact h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 100px 0px 50px 0px; }
+  #contact .contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap; }
+    #contact .contact-container .contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: "Lato", sans-serif;
+      width: 350px;
+      margin-bottom: 40px; }
+      #contact .contact-container .contact-card i {
+        font-size: 30px;
+        color: #f4b200;
+        margin-bottom: 20px; }
+      #contact .contact-container .contact-card h4 {
+        font-weight: bold;
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin-bottom: 30px; }
+      #contact .contact-container .contact-card p {
+        color: #707579;
+        font-size: 20px;
+        letter-spacing: 1px;
+        line-height: 2;
+        text-align: center;
+        width: 60%; }
+      #contact .contact-container .contact-card:nth-child(2) {
+        margin: 0px 10px 40px 10px; }
