@@ -44,10 +44,12 @@
   font-family: $primary-font;
   width: 100%;
   z-index: 3;
+  transition: background-color 0.3s ease-out;
 
   .nav-container {
     @include flex-col;
     width: 90%;
+    margin-bottom: 30px;
   }
 
   .nav-ph {
@@ -117,12 +119,14 @@
     color: #fff;
     z-index: 2;
     width: 349px;
+    overflow: hidden;
     margin: 0px 0px 50px 10px;
 
     .card {
       @include flex-justify-center;
       position: relative;
-      overflow: hidden;
+      left: 0;
+      transition: left 0.3s ease-in-out;
 
       .card-item {
         @include flex-col;
@@ -999,6 +1003,16 @@
       }
     }
   }
+}
+
+//Adding black background for navbar
+.blk-background {
+  background-color: #000;
+}
+
+//Adding primary color to active links
+.active {
+  border-color: $primary-color !important;
 }
 
 @import "mobile";
