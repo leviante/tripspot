@@ -104,11 +104,10 @@
   padding: 20% 0px;
   width: 100%;
 
-  &:after {
+  .landing-overlay {
     @include dark-overlay(5);
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    height: 1000px;
   }
 
   //PRICE CARDS
@@ -350,7 +349,7 @@
     }
   }
 
-  .tours {
+  #tours {
     display: grid;
     grid-template-columns: repeat(4, 250px);
     grid-template-rows: repeat(3, 200px);
@@ -375,8 +374,10 @@
           background-size: cover;
           color: #fff;
 
-          &:after {
+          .tours-overlay {
             @include dark-overlay(#{$num});
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
           }
         }
       }
@@ -408,10 +409,8 @@
   background-position: center;
   background-repeat: no-repeat;
 
-  &:after {
+  .experience-overlay {
     @include dark-overlay(5);
-    background-color: rgba(0, 0, 0, 0.6);
-    height: 470px;
     width: 100%;
   }
 
