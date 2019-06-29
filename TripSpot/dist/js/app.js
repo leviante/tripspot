@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll(".link-item");
 const cardToggle = document.querySelectorAll(".card-link");
 const card = document.querySelector(".card");
 const scrollUp = document.querySelector(".scroll-up");
+const galleryCards = document.querySelectorAll(".gallery-card img");
 const navElementHeights = [];
 
 //Resizing overlay added to elements when resizing the window
@@ -25,12 +26,14 @@ navLinks.forEach(navLink => navLink.addEventListener("click", scrollToSection));
 //Card slide upon clicking one of cardToggle
 cardToggle.forEach(cardLink => cardLink.addEventListener("click", toggleCard));
 
+//Add shadow to gallery card couples when hovered
+galleryCards.forEach(galleryCard => {});
+
 //get scroll amount for footer scroll up element
 scrollUp.addEventListener("click", scrollTop);
 
 //--------------------- THESE WILL RUN WHEN PAGE LOADS ---------------------
 calculateHeight();
-console.log(navElementHeights);
 setOverlay("landing-overlay");
 setOverlay("experience-overlay");
 // ----------------------------------------------------------- FUNCTIONS

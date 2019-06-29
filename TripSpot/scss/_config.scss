@@ -82,3 +82,8 @@ $tours: (
   background-position: center;
   background-repeat: no-repeat;
 }
+
+//Mixin for transition ease
+@mixin easeOut {
+  transition: all 0.3s ease-out;
+}

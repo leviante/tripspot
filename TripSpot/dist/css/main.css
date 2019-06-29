@@ -40,7 +40,7 @@
   font-family: "Montserrat", sans-serif;
   width: 100%;
   z-index: 3;
-  transition: background-color 0.3s ease-out; }
+  transition: all 0.3s ease-out; }
   #main-nav .nav-container {
     display: flex;
     flex-direction: column;
@@ -77,7 +77,7 @@
           color: #fff;
           letter-spacing: 0.5px; }
           #main-nav .navbar .navbar-links .navbar-link .link-item:hover {
-            transition: color 0.3s ease-out;
+            transition: all 0.3s ease-out;
             color: #f4b200; }
 
 #landing {
@@ -528,12 +528,17 @@
       flex-direction: column;
       width: 100%;
       text-align: center;
-      overflow: hidden; }
-      #gallery .gallery-container .gallery-card:hover {
-        cursor: pointer; }
+      overflow: visible; }
       #gallery .gallery-container .gallery-card img {
+        position: relative;
         height: 92%;
-        width: 100%; }
+        width: 100%;
+        z-index: 2;
+        transition: all 0.3s ease-out; }
+        #gallery .gallery-container .gallery-card img:hover {
+          cursor: pointer;
+          transition: all 0.3s ease-out;
+          box-shadow: -2px 6px 36px -3px rgba(0, 0, 0, 0.82) !important; }
       #gallery .gallery-container .gallery-card p {
         margin-top: 0;
         background-color: #f4b200;
@@ -609,12 +614,17 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat; }
+      #prices .price-container .price-info:hover .price-book {
+        transition: all 0.3s ease-out;
+        top: -120px; }
       #prices .price-container .price-info .price-book {
         background: rgba(242, 177, 41, 0.8);
         color: #333;
         position: relative;
+        top: 0;
         width: 100%;
-        padding: 20px; }
+        padding: 20px;
+        transition: all 0.3s ease-out; }
         #prices .price-container .price-info .price-book p {
           text-transform: capitalize;
           font-weight: 600; }
