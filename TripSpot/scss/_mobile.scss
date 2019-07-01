@@ -4,8 +4,42 @@
   //NAVBAR
 
   #main-nav {
-    visibility: hidden;
-    display: none;
+    .nav-container {
+      .navbar {
+        .menu {
+          position: absolute;
+          top: 135px;
+          left: 0;
+          width: 100%;
+          padding: 10px;
+          z-index: 3;
+          height: 0;
+          overflow: hidden;
+          @include easeOut;
+
+          .navbar-links {
+            @include flex-col;
+
+            .navbar-link {
+              margin-bottom: 15px;
+
+              &:nth-child(1) {
+                margin-top: 15px;
+              }
+
+              .link-item {
+                display: block;
+                margin: 0px 0px 10px 20px;
+              }
+            }
+          }
+        }
+        .fas.fa-bars {
+          display: block;
+          margin-left: auto;
+        }
+      }
+    }
   }
 
   //LANDING
@@ -275,6 +309,47 @@
 }
 
 @media screen and (min-width: 501px) and (max-width: 1040px) {
+  //Navbar
+  #main-nav {
+    .nav-container {
+      .navbar {
+        .menu {
+          visibility: hidden;
+          position: absolute;
+          top: 135px;
+          left: 0;
+          width: 100%;
+          padding: 10px;
+          z-index: 3;
+          height: 0;
+          overflow: hidden;
+          @include easeOut;
+
+          .navbar-links {
+            @include flex-col;
+
+            .navbar-link {
+              margin-bottom: 15px;
+
+              &:nth-child(1) {
+                margin-top: 15px;
+              }
+
+              .link-item {
+                display: block;
+                margin: 0px 0px 10px 20px;
+              }
+            }
+          }
+        }
+        .fas.fa-bars {
+          display: block;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
   //INFO
   #info {
     @include flex-col-align-center;
@@ -308,6 +383,11 @@
 
   //Gallery
   #gallery {
+    .gallery-popup {
+      .popup {
+        width: 45%;
+      }
+    }
     h1 {
       text-align: center;
     }
@@ -316,6 +396,16 @@
       .gallery-card {
         justify-self: center;
         width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1041px) and (max-width: 1450px) {
+  #gallery {
+    .gallery-popup {
+      .popup {
+        width: 45%;
       }
     }
   }

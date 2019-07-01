@@ -6,6 +6,10 @@ const card = document.querySelector(".card");
 const scrollUp = document.querySelector(".scroll-up");
 const galleryCards = document.querySelectorAll(".gallery-card img");
 const galleryPopupExit = document.querySelector(".popup i");
+const hamburger = document.querySelector(".fas.fa-bars");
+const menu = document.querySelector(".menu");
+const navbarLink = document.querySelector(".navbar-links");
+
 const navElementHeights = [];
 
 //Resizing overlay added to elements when resizing the window
@@ -37,6 +41,11 @@ galleryPopupExit.addEventListener("click", exitPopup);
 
 //get scroll amount for footer scroll up element
 scrollUp.addEventListener("click", scrollTop);
+
+//Listen click event on hamburger and expand menu when happens
+hamburger.addEventListener("click", function() {
+  expandMenu();
+});
 
 //--------------------- THESE WILL RUN WHEN PAGE LOADS ---------------------
 calculateHeight();
@@ -219,4 +228,22 @@ function showPopup(e) {
 function exitPopup() {
   //remove class from popup to make it invisible again
   document.querySelector(".gallery-popup").classList.remove("show");
+}
+
+// ------------------------------------------------------------------ //
+function expandMenu() {
+  if (menu.getAttribute("class").includes("expand")) {
+    menu.classList.remove("expand");
+    menu.style.height = 0;
+  } else {
+    menu.classList.add("expand");
+    calculateMenuHeight();
+  }
+}
+
+// ------------------------------------------------------------------ //
+function calculateMenuHeight() {
+  var offsetHeight = navbarLink.offsetHeight;
+  console.log(offsetHeight);
+  document.querySelector(".expand").style.height = `${offsetHeight + 30}px`;
 }

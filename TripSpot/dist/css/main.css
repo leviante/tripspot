@@ -65,20 +65,30 @@
         font-size: 38px;
         color: #f4b200;
         margin-right: 5px; }
-    #main-nav .navbar .navbar-links {
-      display: flex;
-      flex-direction: row;
-      list-style: none;
+    #main-nav .navbar .menu {
       margin-left: auto; }
-      #main-nav .navbar .navbar-links .navbar-link {
-        margin-right: 25px; }
-        #main-nav .navbar .navbar-links .navbar-link .link-item {
-          text-decoration: none;
-          color: #fff;
-          letter-spacing: 0.5px; }
-          #main-nav .navbar .navbar-links .navbar-link .link-item:hover {
-            transition: all 0.3s ease-out;
-            color: #f4b200; }
+      #main-nav .navbar .menu .navbar-links {
+        display: flex;
+        flex-direction: row;
+        list-style: none; }
+        #main-nav .navbar .menu .navbar-links .navbar-link {
+          margin-right: 25px; }
+          #main-nav .navbar .menu .navbar-links .navbar-link .link-item {
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 0.5px; }
+            #main-nav .navbar .menu .navbar-links .navbar-link .link-item:hover {
+              transition: all 0.3s ease-out;
+              color: #f4b200; }
+    #main-nav .navbar .fas.fa-bars {
+      background-color: #f4b200;
+      color: #fff;
+      font-size: 23px;
+      padding: 10px;
+      display: none; }
+      #main-nav .navbar .fas.fa-bars:hover {
+        color: #000;
+        cursor: pointer; }
 
 #landing {
   display: flex;
@@ -962,10 +972,36 @@
   opacity: 1 !important;
   transition: all 0.3s ease-out; }
 
+.expand {
+  transition: all 0.3s ease-out;
+  background-color: #000;
+  visibility: visible !important;
+  overflow: auto !important; }
+
 @media screen and (max-width: 500px) {
-  #main-nav {
-    visibility: hidden;
-    display: none; }
+  #main-nav .nav-container .navbar .menu {
+    position: absolute;
+    top: 135px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 3;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out; }
+    #main-nav .nav-container .navbar .menu .navbar-links {
+      display: flex;
+      flex-direction: column; }
+      #main-nav .nav-container .navbar .menu .navbar-links .navbar-link {
+        margin-bottom: 15px; }
+        #main-nav .nav-container .navbar .menu .navbar-links .navbar-link:nth-child(1) {
+          margin-top: 15px; }
+        #main-nav .nav-container .navbar .menu .navbar-links .navbar-link .link-item {
+          display: block;
+          margin: 0px 0px 10px 20px; }
+  #main-nav .nav-container .navbar .fas.fa-bars {
+    display: block;
+    margin-left: auto; }
   #landing .card-slide {
     width: 240px;
     margin: 60px 0px 50px 10px; }
@@ -1106,6 +1142,30 @@
       padding: 0px 10px; } }
 
 @media screen and (min-width: 501px) and (max-width: 1040px) {
+  #main-nav .nav-container .navbar .menu {
+    visibility: hidden;
+    position: absolute;
+    top: 135px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 3;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-out; }
+    #main-nav .nav-container .navbar .menu .navbar-links {
+      display: flex;
+      flex-direction: column; }
+      #main-nav .nav-container .navbar .menu .navbar-links .navbar-link {
+        margin-bottom: 15px; }
+        #main-nav .nav-container .navbar .menu .navbar-links .navbar-link:nth-child(1) {
+          margin-top: 15px; }
+        #main-nav .nav-container .navbar .menu .navbar-links .navbar-link .link-item {
+          display: block;
+          margin: 0px 0px 10px 20px; }
+  #main-nav .nav-container .navbar .fas.fa-bars {
+    display: block;
+    margin-left: auto; }
   #info {
     display: flex;
     flex-direction: column;
@@ -1121,6 +1181,8 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(7, 200px);
     grid-template-areas: "canada canada" "canada canada" "canada canada" "asia asia" "asia asia" "europe europe" "us us"; }
+  #gallery .gallery-popup .popup {
+    width: 45%; }
   #gallery h1 {
     text-align: center; }
   #gallery .gallery-container {
@@ -1128,3 +1190,7 @@
     #gallery .gallery-container .gallery-card {
       justify-self: center;
       width: 80%; } }
+
+@media screen and (min-width: 1041px) and (max-width: 1450px) {
+  #gallery .gallery-popup .popup {
+    width: 45%; } }

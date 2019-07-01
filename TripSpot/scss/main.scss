@@ -74,25 +74,40 @@
         margin-right: 5px;
       }
     }
-
-    .navbar-links {
-      @include flex;
-      list-style: none;
+    .menu {
       margin-left: auto;
 
-      .navbar-link {
-        margin-right: 25px;
+      .navbar-links {
+        @include flex;
+        list-style: none;
 
-        .link-item {
-          text-decoration: none;
-          color: #fff;
-          letter-spacing: 0.5px;
+        .navbar-link {
+          margin-right: 25px;
 
-          &:hover {
-            @include easeOut;
-            color: $primary-color;
+          .link-item {
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 0.5px;
+
+            &:hover {
+              @include easeOut;
+              color: $primary-color;
+            }
           }
         }
+      }
+    }
+
+    .fas.fa-bars {
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 23px;
+      padding: 10px;
+      display: none;
+
+      &:hover {
+        color: #000;
+        cursor: pointer;
       }
     }
   }
@@ -1092,6 +1107,14 @@
   visibility: visible !important;
   opacity: 1 !important;
   @include easeOut;
+}
+
+//Adding expand class to mobile menu
+.expand {
+  @include easeOut;
+  background-color: #000;
+  visibility: visible !important;
+  overflow: auto !important;
 }
 
 @import "mobile";
