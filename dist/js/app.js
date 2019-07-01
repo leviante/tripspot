@@ -223,7 +223,7 @@ function showPopup(e) {
   });
 }
 
-// ----------------------------------------------------------------- //
+// -------------------------------------------------------------- //
 
 function exitPopup() {
   //remove class from popup to make it invisible again
