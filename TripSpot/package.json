@@ -1,0 +1,14 @@
+{
+  "name": "tripspot",
+  "version": "1.0.0",
+  "description": "Template website re-design",
+  "main": "app.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Berk Açıkgöz",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
