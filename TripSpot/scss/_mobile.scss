@@ -170,6 +170,23 @@
 
   //GALLERY
   #gallery {
+    .gallery-popup {
+      @include flex-col-align-center;
+      justify-content: initial;
+
+      .popup {
+        width: 90%;
+        height: auto;
+        margin-top: 200px;
+
+        img {
+          width: 90%;
+          height: 80%;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
     h1 {
       text-align: center;
     }

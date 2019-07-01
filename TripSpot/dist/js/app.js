@@ -5,6 +5,7 @@ const cardToggle = document.querySelectorAll(".card-link");
 const card = document.querySelector(".card");
 const scrollUp = document.querySelector(".scroll-up");
 const galleryCards = document.querySelectorAll(".gallery-card img");
+const galleryPopupExit = document.querySelector(".popup i");
 const navElementHeights = [];
 
 //Resizing overlay added to elements when resizing the window
@@ -27,7 +28,12 @@ navLinks.forEach(navLink => navLink.addEventListener("click", scrollToSection));
 cardToggle.forEach(cardLink => cardLink.addEventListener("click", toggleCard));
 
 //Add shadow to gallery card couples when hovered
-galleryCards.forEach(galleryCard => {});
+galleryCards.forEach(galleryCard =>
+  galleryCard.addEventListener("click", showPopup)
+);
+
+//Exit popup when clicked exit btn
+galleryPopupExit.addEventListener("click", exitPopup);
 
 //get scroll amount for footer scroll up element
 scrollUp.addEventListener("click", scrollTop);
@@ -177,3 +183,35 @@ function setNavActiveClass() {
   });
 }
 // ------------------------------------------------------------------ //
+
+function showPopup(e) {
+  //get img of the clicked gallery card
+  const img = e.target.getAttribute("src");
+
+  //change img inside popup
+  document.querySelector(".popup img").setAttribute("src", img);
+
+  //add class to popup to toggle visibility
+  document.querySelector(".gallery-popup").classList.add("show");
+
+  //get target element to scroll
+  const gallery = document.querySelector("#gallery");
+
+  //get target element height from top
+  const galleryRect = gallery.getBoundingClientRect();
+  const galleryHeight = galleryRect.top;
+
+  //animate scroll
+  window.scrollBy({
+    top: galleryHeight + 170, //20 added to handle margin differences
+    left: 0,
+    behavior: "smooth"
+  });
+}
+
+// ------------------------------------------------------------------ //
+
+function exitPopup() {
+  //remove class from popup to make it invisible again
+  document.querySelector(".gallery-popup").classList.remove("show");
+}

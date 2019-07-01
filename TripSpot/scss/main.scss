@@ -581,6 +581,54 @@
 //SECTION 6 - GALLERY
 #gallery {
   @include flex-col-align-center;
+  position: relative;
+
+  .gallery-popup {
+    position: absolute;
+    @include flex-col-align-center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    visibility: hidden;
+    opacity: 0;
+
+    .popup {
+      @include flex-col-align-center;
+      background: #fff;
+      border-radius: 5px;
+      width: 25%;
+      height: auto;
+
+      i {
+        align-self: flex-end;
+        color: #8c8c8c;
+        margin: 15px 15px 25px 0px;
+
+        &:hover {
+          cursor: pointer;
+          color: darken(#8c8c8c, 10);
+        }
+      }
+
+      img {
+        max-width: 90%;
+        max-height: 80%;
+        margin-bottom: 15px;
+      }
+
+      p {
+        font-family: $secondary-font;
+        color: #8c8c8c;
+        line-height: 2;
+        width: 90%;
+        margin-bottom: 15px;
+      }
+    }
+  }
 
   h1 {
     font-family: $primary-font;
@@ -1037,6 +1085,13 @@
 .active {
   border-color: $primary-color !important;
   color: $primary-color !important;
+}
+
+//Adding show class to popup
+.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+  @include easeOut;
 }
 
 @import "mobile";
