@@ -72,6 +72,10 @@ function toggleCard(e) {
   e.preventDefault();
   const cardShowcase = e.target;
 
+  //get the width of card
+  const cardSlide = document.querySelector(".card-slide");
+  const slideWidth = cardSlide.offsetWidth;
+
   //gets the left offset number
   let offsetStr = window.getComputedStyle(card).left;
   let offsetValue = parseInt(offsetStr.split("px")[0]);
@@ -79,33 +83,34 @@ function toggleCard(e) {
   switch (offsetValue) {
     case 0:
       if (cardShowcase == cardToggle[0]) {
-        card.style.left = "349px";
+        console.log(`${slideWidth}px`);
+        card.style.left = "100%";
         cardToggle[1].classList.remove("active");
         cardToggle[0].classList.add("active");
       } else if (cardShowcase == cardToggle[2]) {
-        card.style.left = "-349px";
+        card.style.left = `-100%`;
         cardToggle[1].classList.remove("active");
         cardToggle[2].classList.add("active");
       }
       break;
-    case -349:
+    case -slideWidth:
       if (cardShowcase == cardToggle[1]) {
         card.style.left = "0px";
         cardToggle[1].classList.add("active");
         cardToggle[2].classList.remove("active");
       } else if (cardShowcase == cardToggle[0]) {
-        card.style.left = "349px";
+        card.style.left = `100%`;
         cardToggle[2].classList.remove("active");
         cardToggle[0].classList.add("active");
       }
       break;
-    case 349:
+    case slideWidth:
       if (cardShowcase == cardToggle[1]) {
         card.style.left = "0px";
         cardToggle[1].classList.add("active");
         cardToggle[0].classList.remove("active");
       } else if (cardShowcase == cardToggle[2]) {
-        card.style.left = "-349px";
+        card.style.left = `-100%`;
         cardToggle[0].classList.remove("active");
         cardToggle[2].classList.add("active");
       }
